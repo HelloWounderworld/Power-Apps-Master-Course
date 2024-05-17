@@ -125,4 +125,38 @@ URLのリンクを通して：　https://ippu-biz.com/development/powerplatform/
 
 ##　テキストラベルの表示を修正する【Selectedプロパティの応用】：
 DetailScreen1のフォーム以外のコントロールを修正しようと思います。
-・
+・今回はDetailScreen1の顧客表テキストラベルの修正を行います。
+・まずはDetailScreen1へと向かってそのラベルをセレクトします。
+・次にLblAppName1をセレクトします。
+・プロパティは”Text”です。
+・そのプロパティの数式にこのように入れます”BrowseGallery1.Selected.顧客名”。
+
+## EditScreenの概要とEdit formの役割について:
+今回はEditScreenの編集と修正を行います。URL：https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-and-edit-forms
+・EditScreenをセレクトします。
+・チェックマークの付いたコントローラをセレクトします。
+・自動的にプロパティに見せられるのは”OnSelect”です。
+・SubmitForm関数が記載された情報をデータソースへとセーブする役割を果たしています。 URL:https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-form
+
+## Edit formにドロップダウンコントロールを配置する:
+・まずはEditScreenのフィールドの並び替えを行います。
+・EditFormをセレクトします。
+・フィールドの配置の変え方は以前に行った副賞となります。
+・ドロップダウンコントロールを配置します。
+・EditFormの中にあるフィールドの与信調査＿DataCardの中にありますDataCardValueをセレクトします。
+・挿入から入力のオプションにてドロップダウンを選択します。
+・ロック解除と追加ボタンを押します。
+・そのドロップダウンの中にテキストを埋め込みます。
+・プロパティに”Items”をセレクトします。
+・数式にこのように入れます”["未","済"]”。
+
+## SubmitForm関数とUpdateプロパティについて:
+先ほど配置したドロップダウンコントローラにSumitFormの数式を入れていきます。
+・まずはEditFormの中にあるフィールドの与信調査＿DataCardの中にありますDataCardValueをセレクトします。
+・プロパティに”Update”をセレクトします。
+・その数式には元々あったDataCardValueが記載されています。
+・その数式を変更します、Dropdown1.Selected.Value。
+・元々あったテクスト入力のカードを削除します。
+・エラー、罰点、マークが表示されます。
+・罰点マークにクリックして数式の調整を施します。
+・以前存在していたDataCardValueをDropdown1へと変更して、問題が解決されます。
