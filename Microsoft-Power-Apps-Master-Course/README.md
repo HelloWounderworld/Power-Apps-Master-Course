@@ -498,17 +498,17 @@ EditScreenにて送信ボタンを押したら完了と一覧画面へと移動�
 ### Collect関数をボタンに埋め込んで新規データをリストへ送信する：
 https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-clear-collect-clearcollect
 
-Collect(トラブル記録管理表,{対応ID:Text(Last(トラブル記録管理表).対応ID+1),
-登録日:Today(),
-対応ステータス:drpStatus.Selected.Value,
-質問者:txtQuestioner.Text,
-情シス担当者:txtStaff.Text,
-件名:txtDetail.Text,
-詳細:txtDetail.Text,
-対応内容:txtSupport.Text
-})
+    Collect(トラブル記録管理表,{対応ID:Text(Last(トラブル記録管理表).対応ID+1),
+    登録日:Today(),
+    対応ステータス:drpStatus.Selected.Value,
+    質問者:txtQuestioner.Text,
+    情シス担当者:txtStaff.Text,
+    件名:txtDetail.Text,
+    詳細:txtDetail.Text,
+    対応内容:txtSupport.Text
+    })
 
-;Navigate(BrowseScreen1.Fade)
+    ;Navigate(BrowseScreen1.Fade)
 
 ### NewScreenのOnVisibleプロパティにReset関数を埋め込んでテキスト入力をクリアする:
 - Screen1からNewScreenへと名前を変更します。
